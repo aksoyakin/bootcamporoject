@@ -5,8 +5,8 @@ import com.tobeto.bootcamporoject.model.dto.applicant.request.ApplicantDeleteReq
 import com.tobeto.bootcamporoject.model.entities.Applicant;
 import com.tobeto.bootcamporoject.service.ApplicantCreateService;
 import com.tobeto.bootcamporoject.service.ApplicantDeleteService;
+import com.tobeto.bootcamporoject.service.ApplicantUpdateService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.autoconfigure.freemarker.FreeMarkerTemplateAvailabilityProvider;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -26,10 +26,11 @@ public class ApplicantController {
         return createdApplicant;
     }
 
-    //delete
-    @DeleteMapping
-    public void deleteApplicant(@RequestBody ApplicantDeleteRequest applicantDeleteRequest){
-        applicantDeleteService.delete(applicantDeleteRequest);
+    @DeleteMapping("/{applicantId}")
+    public void deleteApplicant(
+            @PathVariable("applicantId") final Integer applicantId
+    ) {
+        applicantDeleteService.delete(applicantId);
     }
 
 

@@ -19,7 +19,7 @@ public class InstructorController {
 
     // TODO: instructor oluşturma
     // TODO: instrur'a id üzerinden erişme
-    // TODO: bütün instructorlara erişe
+    // TODO: bütün instructorlara erişme
     // TODO: url üzerinden belirtilen instructarı güncelleyen endpoint
     // TODO: id değeri url üzerinden belirtilen instructorı silen endpoint
 
